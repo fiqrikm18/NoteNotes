@@ -56,6 +56,10 @@ public class SessionManager {
         return getPrefrences(context).getString(SessionManager.TOKEN, "");
     }
 
+    public static int getUserId(Context context) {
+        return getPrefrences(context).getInt(USERID, 0);
+    }
+
     public static void clear(Context context) {
         editor = getPrefrences(context).edit();
         editor.clear();

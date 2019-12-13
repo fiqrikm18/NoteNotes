@@ -1,7 +1,5 @@
 package com.idts.notenotes.activity.Login;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -9,7 +7,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.idts.notenotes.R;
 import com.idts.notenotes.activity.Register.RegisterActivity;
@@ -55,7 +54,7 @@ public class LoginActivity extends AppCompatActivity implements ILoginView {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                presenter.auth(LoginActivity.this, username.getText().toString(), password.getText().toString());
+                presenter.auth(getApplicationContext(), username.getText().toString(), password.getText().toString());
             }
         });
 
