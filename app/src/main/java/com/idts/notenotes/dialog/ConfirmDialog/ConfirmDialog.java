@@ -40,6 +40,7 @@ public class ConfirmDialog extends Dialog implements IConfirmDialogView{
 
         progressDialog = new ProgressDialog(context);
         progressDialog.setCancelable(false);
+        progressDialog.setMessage("Loading...");
 
         editBtn = findViewById(R.id.txt_edit);
         deleteBtn = findViewById(R.id.txt_delete);
@@ -54,7 +55,7 @@ public class ConfirmDialog extends Dialog implements IConfirmDialogView{
         deleteBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context, "Delete Btn Clicked " + String.valueOf(noteId), Toast.LENGTH_SHORT).show();
+                preserenter.onDeleteButtonClicked(context, noteId);
                 dismiss();
             }
         });

@@ -16,8 +16,8 @@ import com.idts.notenotes.models.NotesItem;
 import java.util.ArrayList;
 
 public class NoteItemAdapter extends RecyclerView.Adapter<NoteItemAdapter.ViewHolder> {
-    ArrayList<NotesItem> notesItems;
-    Context context;
+    private ArrayList<NotesItem> notesItems;
+    private Context context;
 
     public NoteItemAdapter(Context context, ArrayList<NotesItem> notesItems) {
         this.notesItems = notesItems;

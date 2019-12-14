@@ -51,7 +51,7 @@ public class DashboardPresenter implements IDashboardPresenter {
             @Override
             public void onFailure(Call<NoteData> call, Throwable t) {
                 view.hideProgressDialog();
-                Log.d("FRAGMENTDASHBOARDERROR", t.getMessage());
+                Log.d("FRAGMENT_DASHBOARDERROR", t.getMessage());
             }
         });
     }

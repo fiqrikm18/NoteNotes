@@ -26,6 +26,6 @@ public interface ApiRequest {
     @GET("api/notes/all/users/{id}")
     Call<NoteData> getNotes(@Path("id") int userId);
 
-    @DELETE("/api/notes/change/{note}/users/{user}")
+    @DELETE("/api/notes/{note}/users/{user}")
     Call<NoteData> deleteNote(@Path("note") int noteId, @Path("user") int userId);
 }

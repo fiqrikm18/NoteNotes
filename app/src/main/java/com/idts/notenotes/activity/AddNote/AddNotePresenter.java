@@ -2,8 +2,6 @@ package com.idts.notenotes.activity.AddNote;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
-import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -35,7 +33,7 @@ public class AddNotePresenter implements IAddNotePresenter {
                 try {
                     NoteData data = response.body();
 
-                    if(data.isIsSuccess()) {
+                    if(data.isSuccess()) {
                         context.startActivity(new Intent(context.getApplicationContext(), MainActivity.class));
                         view.finishActivity();
                     }

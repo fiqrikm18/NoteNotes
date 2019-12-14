@@ -27,7 +27,7 @@ public class NoteData{
 		this.isSuccess = isSuccess;
 	}
 
-	public boolean isIsSuccess(){
+	public boolean isSuccess(){
 		return isSuccess;
 	}
 
